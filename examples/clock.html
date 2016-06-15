@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSE Clock</title>
+    <script>
+      var source = new EventSource("http://localhost:8080/sse");
+      source.onmessage = function(message) {
+          var time = document.getElementById("time");
+          time.innerText = message.data;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Time: <span id="time"></span></p>
+  </body>
+</html>

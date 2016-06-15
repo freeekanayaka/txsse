@@ -1,0 +1,5 @@
+txSSE.egg-info
+dist
+env
+*.pyc
+ghostdriver.log
