@@ -27,7 +27,7 @@ setup(
 
     author="Free Ekanayaka",
     author_email="<free.ekanayaka@canonical.com>",
-    description="Server-Sent Events implementation for Twisted",
+    description="Server-Sent Events (SSE) implementation for Twisted",
     license="AGPL",
     keywords="twisted sse",
     url="http://launchpad.net/txsse",
