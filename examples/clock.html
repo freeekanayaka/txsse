@@ -3,7 +3,7 @@
   <head>
     <title>SSE Clock</title>
     <script>
-      var source = new EventSource("http://localhost:8080/sse");
+      var source = new EventSource("http://127.0.0.1:8080/sse");
       source.onmessage = function(message) {
           var time = document.getElementById("time");
           time.innerText = message.data;

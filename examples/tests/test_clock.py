@@ -25,12 +25,13 @@ class ClockExampleTest(TestCase):
         """
         Test that notifications are correctly delivered.
         """
-        self.driver.get("http://localhost:8080")
+        self.driver.get("http://127.0.0.1:8080")
         self.assertEqual("SSE Clock", self.driver.title)
         time = self.driver.find_element_by_id("time")
-        current = int(time.text)
         wait = WebDriverWait(self.driver, 3)
-        wait.until(lambda _: int(time.text) > current)
+        wait.until(lambda _: time.text != "")
+        current = int(time.text)
+        wait.until(lambda _: time.text > current)
 
 
 def is_ready():
